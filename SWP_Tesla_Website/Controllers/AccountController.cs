@@ -144,7 +144,10 @@ namespace SWP_Tesla_Website.Controllers {
                     if (validUser != null) {
                         if (validUser.access == Access.BANNED) {
                             HttpContext.Session.SetString("error-login", "You are BANNED!");
-                            return RedirectToAction("View");
+                            return View(validUser);
+                        }else if(validUser.access == Access.UNAUTHORIZED) {
+                            HttpContext.Session.SetString("error-login", "You are UNAUTHORIZED!");
+                            return View(validUser);
                         }
                         
                         HttpContext.Session.SetString("user", validUser.getJson());
