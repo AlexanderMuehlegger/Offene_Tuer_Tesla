@@ -4,7 +4,7 @@
 2. Start MySQL and insert the script `SWP_Tesla_Website/Models/DB/scripts/script.sql`
 3. Project can now be started
 
-### Diffrent Accounts
+### Different Accounts
 - Admin: 
   - User: `alexander` &emsp; PW: `12345678`
 - User:
